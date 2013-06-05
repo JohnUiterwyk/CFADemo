@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- The HTML 4.01 Transitional DOCTYPE declaration-->
+<!-- above set at the top of the file will set     -->
+<!-- the browser's rendering engine into           -->
+<!-- "Quirks Mode". Replacing this declaration     -->
+<!-- with a "Standards Mode" doctype is supported, -->
+<!-- but may lead to some differences in layout.   -->
+
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link type="text/css" rel="stylesheet" href="/stylesheets/main.css" />
+    <link type="text/css" rel="stylesheet" href="/stylesheets/intro.css" />
+      <link type="text/css" rel="stylesheet" href="/stylesheets/game.css" />
+    <title>CFA Demo</title>
+  </head>
+
+  <body>
+        <div id="navBar">
+            <div id="navBarLeftButton"></div>
+            <div id="navBarTitle">BELLEVILLE</div>
+            <div id="navBarRightButton"></div>
+        </div>
+	    <div id="intro">
+            <div id="introInfoBox">
+                <h1>Planning For Belleville</h1>
+                <p>A planning team is making decisions about zoning for an area which has opened up for residential
+                    development.  Belleville is a small valley which is very rural and attractive, however there are
+                    serious planning concerns about bushfire risk from the surrounding state forest and there is also a
+                    flooding risk in some areas near the river. The planning team must balance these concerns to get
+                    the right mix of disaster prevention and residential opportunities.</p>
+                <p>
+                    There are three participants in the planning team. One is concerned with fire issues, another with
+                    water management issues, and the third is concerned to make sure that the local council will be
+                    financially viable.</p>
+                <h2>Choose Your Team</h2>
+                <div id="teamsIcons">
+                    <div class="introTeamButton" id="fireTeamButton">
+                        <img class="introTeamIcon" alt="Fire Team" src="images/intro/1024_fire_icon.png"/>
+                        <div class="introTeamTitle">FIRE</div>
+                    </div>
+                    <div class="introTeamButton" id="waterTeamButton">
+                        <img class="introTeamIcon" alt="Water Team" src="images/intro/1024_water_icon.png"/>
+                        <div class="introTeamTitle">WATER</div>
+                    </div>
+                    <div class="introTeamButton" id="councilTeamButton">
+                        <img class="introTeamIcon" alt="Council Team" src="images/intro/1024_council_icon.png"/>
+                        <div class="introTeamTitle">COUNCIL</div>
+                    </div>
+                    <div class="introTeamButton" id="specButton">
+                        <img class="introTeamIcon" alt="Spectator" src="images/intro/1024_belleville_icon.png"/>
+                        <div class="introTeamTitle">BELLEVILLE</div>
+                    </div>
+                </div>
+            </div>
+	    </div>
+        <div id="gameView">
+            <canvas id="gameCanvas" class="mapCanvas"></canvas>
+        </div>
+    	<script type="text/javascript" src="/js/lib/jquery-2.0.0.js"></script>
+        <script type="text/javascript" src="/js/lib/kinetic-v4.5.3.js"></script>
+        <script type="text/javascript" src="/js/lib/preloadjs-0.3.1.min.js"></script>
+        <script type="text/javascript" src="/js/IntroController.js"></script>
+        <script type="text/javascript" src="/js/GameMap.js"></script>
+        <script type="text/javascript" src="/js/GameView.js"></script>
+		<script type="text/javascript" src="/js/GameClient.js"></script>
+  </body>
+</html>
