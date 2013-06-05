@@ -11,12 +11,13 @@ function GameView()
 }
 GameView.prototype.initialize = function(player)
 {
-   this.player = player;
    this.map.initialize();
-   this.show();
 }
-
+GameView.prototype.loadPlayer = function(player)
+{
+    this.player = player;
+}
 GameView.prototype.show = function()
 {
-   $("#gameView").show();
+   $("#gameDiv").show();
 }
