@@ -16,6 +16,7 @@ function BoxBar(game)
     this.selectBoxes = [];
     this.settings =null;
     this.selected = -1;
+    this.selArray = [0];
 }
 BoxBar.prototype.initialize = function(settings)
 {
@@ -94,15 +95,20 @@ BoxBar.prototype.fillSelect = function(id)
 }
 BoxBar.prototype.multiSelect = function(selection)
 {
-    for(var i = 0; i < this.selectBoxes.length;i++)
+    if(!this.selArray.compare(selection))
     {
-        if(selection.indexOf(i+1) != -1)
+        this.selArray = selection;
+        for(var i = 0; i < this.selectBoxes.length;i++)
         {
-            this.selectBoxes[i].setOpacity(1);
-        }else
-        {
-            this.selectBoxes[i].setOpacity(0);
+            if(selection.indexOf(i+1) != -1)
+            {
+                this.selectBoxes[i].setOpacity(1);
+            }else
+            {
+                this.selectBoxes[i].setOpacity(0);
+            }
         }
+        this.kineticGroup.draw();
     }
 }
 BoxBar.prototype.setSelected = function(id)

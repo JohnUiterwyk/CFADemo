@@ -62,5 +62,9 @@ CouncilStatsPanel.prototype.addText = function()
 }
 CouncilStatsPanel.prototype.update = function(model)
 {
-    this.budgetGraph.update(model);
+    if(model.stats.income != this.budgetGraph.lastIncome || model.stats.expenses != this.budgetGraph.lastExpense)
+    {
+        this.budgetGraph.update(model);
+        this.panel.draw();
+    }
 }

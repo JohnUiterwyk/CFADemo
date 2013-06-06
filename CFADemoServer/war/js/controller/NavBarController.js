@@ -16,7 +16,7 @@ NavBarController.prototype.initialize = function()
 {
     var that = this;
     $(".navBarButton").on("touchstart mousedown",function(event){that.onButtonClick(event,this)});
-    $("#navBarTitle").on("touchstart mousedown",function(){location.reload()});
+    //$("#navBarTitle").on("touchstart mousedown",function(){location.reload()});
 }
 NavBarController.prototype.showButtons = function()
 {

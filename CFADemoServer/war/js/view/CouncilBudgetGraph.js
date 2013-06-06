@@ -11,6 +11,8 @@ function CouncilBudgetGraph(game)
     this.kineticGroup = new Kinetic.Group();
     this.incomeBar = null;
     this.expenseBar = null;
+    this.lastIncome = 0;
+    this.lastExpense = 0;
 }
 CouncilBudgetGraph.prototype.initialize = function(x,y)
 {
@@ -48,10 +50,13 @@ CouncilBudgetGraph.prototype.initialize = function(x,y)
 }
 CouncilBudgetGraph.prototype.update = function(model)
 {
-    this.incomeBar.setHeight(model.stats.income *10);
-    this.incomeBar.setPosition(35,25+100-this.incomeBar.getHeight());
-    this.expenseBar.setHeight(model.stats.expenses *10);
-    this.expenseBar.setPosition(90,25+100-this.expenseBar.getHeight());
+
+        this.incomeBar.setHeight(model.stats.income *10);
+        this.incomeBar.setPosition(35,25+100-this.incomeBar.getHeight());
+        this.expenseBar.setHeight(model.stats.expenses *10);
+        this.expenseBar.setPosition(90,25+100-this.expenseBar.getHeight());
+        this.lastExpense =  model.stats.expenses;
+        this.lastIncome =  model.stats.income;
 }
 CouncilBudgetGraph.prototype.addLine = function(color,points)
 {

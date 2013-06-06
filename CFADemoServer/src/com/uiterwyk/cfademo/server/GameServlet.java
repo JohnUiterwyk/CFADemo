@@ -2,6 +2,7 @@ package com.uiterwyk.cfademo.server;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.logging.Level;
 import java.util.regex.Pattern;
 
 import javax.servlet.ServletException;
@@ -9,6 +10,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.google.appengine.api.memcache.ErrorHandlers;
+import com.google.appengine.api.memcache.MemcacheService;
+import com.google.appengine.api.memcache.MemcacheServiceFactory;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.uiterwyk.cfademo.game.Decision;
@@ -33,8 +37,18 @@ public class GameServlet extends HttpServlet {
 			throws ServletException, IOException 
 	{
 
-		processInput(req);
+		MemcacheService syncCache = MemcacheServiceFactory.getMemcacheService();
+	    syncCache.setErrorHandler(ErrorHandlers.getConsistentLogAndContinue(Level.INFO));
+	    this.decisions = null;
+	    this.decisions = (ArrayList<Decision>) syncCache.get("decisions");
+	    if(this.decisions == null)
+	    {
+	    	this.decisions = new ArrayList<Decision>();
+		    PopulateData.populate(this.decisions);
+	    }
+	    processInput(req);
 		outputDecisionJSON(resp);
+	    syncCache.put("decisions", this.decisions);
 	
 	}
 
@@ -42,11 +56,24 @@ public class GameServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException 
 	{
-		processInput(req);
+		MemcacheService syncCache = MemcacheServiceFactory.getMemcacheService();
+	    syncCache.setErrorHandler(ErrorHandlers.getConsistentLogAndContinue(Level.INFO));
+	    this.decisions = null;
+	    this.decisions = (ArrayList<Decision>) syncCache.get("decisions");
+	    if(this.decisions == null)
+	    {
+	    	this.decisions = new ArrayList<Decision>();
+		    PopulateData.populate(this.decisions);
+	    }
+	    processInput(req);
 		outputDecisionJSON(resp);
+	    syncCache.put("decisions", this.decisions);
 	}
 	private void processInput(HttpServletRequest req)
 	{
+
+
+	    
 		String decisionParam = req.getParameter("decisionId");
 		String playerParam = req.getParameter("playerId");
 		String selectionParam = req.getParameter("selection");

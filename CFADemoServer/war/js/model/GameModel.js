@@ -27,10 +27,6 @@ function GameModel(game)
     this.xhr = null;
 }
 
-GameModel.prototype.calcStats = function()
-{
-
-}
 GameModel.prototype.setChangeListener = function(callback)
 {
     this.notifyListener = callback;
@@ -144,4 +140,72 @@ GameModel.prototype.doUpdateXHR = function()
     {
         setTimeout(this.doUpdateXHR.bind(this),this.updateInterval);
     }
+}
+
+
+
+GameModel.prototype.calcStats = function()
+{
+    var gFireSafeArea = 250; //ha (all areas open to residential development)
+    var gWaterSafeArea = 250; //ha (all areas open to residential development)
+
+    var gHousingArea = gFireSafeArea + gWaterSafeArea; //ha (all areas open to residential development)
+    var gHousingDensity = 0; //dwellings/ha
+    var gDwellings = 0; //35 dwellings/ha
+    var gBaseExpenditure = 10000000; //change this according to infrastructure needs, etc.
+    var gBaseHouseCost = 300000; //dollars : increases depending on protection, etc.
+    var gFireProtection = 10000;
+    var gWaterProtection = 10000;
+    var gDeveloperFee = 0; //dollars
+    var gHouseCost = gBaseHouseCost + gFireProtection + gWaterProtection + gDeveloperFee;
+    var gPeoplePerDwelling = 2.5; //should be a constant. DON'T MAKE THIS ZERO!
+    var gRates = 0; //dollars per year
+    var gRateIncome = 0; //dollars = population * rates / gPeoplePerDwelling
+    var gDesirability = 2.5; //measure of how attractive area is to live in. Multiplies gDwellings to get population
+    var gPopulation = 0; //people (affected by housing cost, etc). gDesirability * dwellings
+    var gExpenses = 1000000;
+
+    var values = [250,180,110,80,50];
+    var index = this.fire[0][0];
+    gFireSafeArea = values[index];
+
+    values = [0,20000,60000,80000,100000];
+    index = this.fire[1][0];
+    gFireProtection = values[index];
+
+    gExpenses += 400000 * this.fire[2].length;
+
+    values = [250,200,160,130,70];
+    index = this.water[0][0];
+    gWaterSafeArea = values[index];
+
+    values = [0,20000,40000,60000,90000];
+    index = this.water[1][0];
+    gWaterProtection = values[index];
+
+    gExpenses += 400000 * this.water[2].length;
+
+    values = [150,300,600,800,1000];
+    index = this.council[0][0];
+    gRates = values[index];
+
+    values = [5,15,30,45,60];
+    index = this.council[1][0];
+    gHousingDensity = values[index];
+    gExpenses *= (index+5)/10
+
+    values = [0,20000,60000,80000,100000];
+    index = this.council[2][0];
+    gDeveloperFee = values[index];
+
+    gHouseCost = gBaseHouseCost + gFireProtection + gWaterProtection + gDeveloperFee;
+    gHousingArea = gFireSafeArea + gWaterSafeArea;
+    gDwellings = gHousingDensity * gHousingArea;
+    gPopulation = gDwellings * gDesirability;
+    gRateIncome = (gPopulation / gPeoplePerDwelling) * gRates+100000;
+    this.stats.houseDensity = this.council[1][0];
+    this.stats.income = Math.min(gRateIncome/2000000,10);
+    this.stats.population = gPopulation;
+    this.stats.housePrice = gHouseCost;
+    this.stats.expenses =  gExpenses/900000;
 }
