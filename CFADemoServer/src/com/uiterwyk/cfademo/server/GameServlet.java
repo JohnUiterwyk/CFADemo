@@ -48,8 +48,13 @@ public class GameServlet extends HttpServlet {
 	private void processInput(HttpServletRequest req)
 	{
 		String decisionParam = req.getParameter("decisionId");
-		String playerParam = req.getParameter("player");
+		String playerParam = req.getParameter("playerId");
 		String selectionParam = req.getParameter("selection");
+		String resetParam = req.getParameter("reset");
+		if(playerParam != null)System.out.println("player="+playerParam);
+		if(decisionParam != null)System.out.println("decision="+decisionParam);
+		if(selectionParam != null)System.out.println("selection="+selectionParam);
+		if(resetParam != null)System.out.println("reset="+resetParam);
 		if(decisionParam != null && playerParam != null)
 		{
 			int decisionId = -1;
@@ -61,7 +66,7 @@ public class GameServlet extends HttpServlet {
 			}
 			Decision decision = getDecision(playerParam, decisionId);
 			if(decision != null) decision.clearSelection();
-			if(selectionParam != null)
+			if(selectionParam != null && selectionParam != "")
 			{
 				String[] selections = selectionParam.split(Pattern.quote(":"));
 				for(int i = 0; i< selections.length;i++)
@@ -73,6 +78,21 @@ public class GameServlet extends HttpServlet {
 					{
 						
 					}
+				}
+			}else
+			{
+				decision.setSelection(0);
+			}
+		}
+		
+		//reset
+		if(resetParam != null && resetParam != "")
+		{
+			for (Decision decision : decisions) 
+			{
+				if(decision.getPlayerId().equals(resetParam) || resetParam.equals("all"))
+				{
+					decision.setSelection(0);
 				}
 			}
 		}

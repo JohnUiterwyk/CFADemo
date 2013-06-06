@@ -6,20 +6,21 @@ import java.util.ArrayList;
 public class Decision implements Serializable
 {
 	private String playerId = "";
-	private Integer decisionid = -1;
+	private Integer decisionId = -1;
 	private ArrayList<Integer> selection = new ArrayList<Integer>();
 
 	public Decision(String playerId, Integer decisionid) {
 		super();
 		this.playerId = playerId;
-		this.decisionid = decisionid;
+		this.decisionId = decisionid;
+		this.selection.add(0);
 	}
 	
 	public Integer getDecisionid() {
-		return decisionid;
+		return decisionId;
 	}
 	public void setDecisionid(Integer decisionid) {
-		this.decisionid = decisionid;
+		this.decisionId = decisionid;
 	}
 	public String getPlayerId() {
 		return playerId;

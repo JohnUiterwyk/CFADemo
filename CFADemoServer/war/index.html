@@ -11,7 +11,7 @@
       <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
       <META HTTP-EQUIV="Expires" CONTENT="-1">
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=4">
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
     <link type="text/css" rel="stylesheet" href="/stylesheets/main.css" />
@@ -22,9 +22,9 @@
 
   <body>
         <div id="navBar">
-            <div id="navBarLeftButton"></div>
-            <div id="navBarTitle">BELLEVILLE2</div>
-            <div id="navBarRightButton"></div>
+            <div id="navBarLeftButton" class="navBarButton">Back</div>
+            <div id="navBarTitle">BELLEVILLE</div>
+            <div id="navBarRightButton"class="navBarButton">Reset</div>
         </div>
 	    <div id="intro">
             <div id="introInfoBox">
@@ -38,34 +38,61 @@
                     There are three participants in the planning team. One is concerned with fire issues, another with
                     water management issues, and the third is concerned to make sure that the local council will be
                     financially viable.</p>
-                <h2>Choose Your Team</h2>
-                <div id="teamsIcons">
+
+                <div id="preloadContainer">
+                    <h2 style="text-align: left;">Loading</h2>
+                    <div id="preloadProgressBorder">
+                        <div id="preloadProgress"></div>
+                    </div>
+                </div>
+                <div id="teamButtons">
+                    <h2 style="text-align: left;">Choose Your Team</h2>
                     <div class="introTeamButton" id="fireTeamButton">
-                        <img class="introTeamIcon" alt="Fire Team" src="images/intro/1024_fire_icon.png"/>
+                        <img class="introTeamIcon" alt="Fire Team" src="images/intro/2048_fire_icon.png"/>
                         <div class="introTeamTitle">FIRE</div>
                     </div>
                     <div class="introTeamButton" id="waterTeamButton">
-                        <img class="introTeamIcon" alt="Water Team" src="images/intro/1024_water_icon.png"/>
+                        <img class="introTeamIcon" alt="Water Team" src="images/intro/2048_water_icon.png"/>
                         <div class="introTeamTitle">WATER</div>
                     </div>
                     <div class="introTeamButton" id="councilTeamButton">
-                        <img class="introTeamIcon" alt="Council Team" src="images/intro/1024_council_icon.png"/>
+                        <img class="introTeamIcon" alt="Council Team" src="images/intro/2048_council_icon.png"/>
                         <div class="introTeamTitle">COUNCIL</div>
                     </div>
                     <div class="introTeamButton" id="specButton">
-                        <img class="introTeamIcon" alt="Spectator" src="images/intro/1024_belleville_icon.png"/>
+                        <img class="introTeamIcon" alt="Spectator" src="images/intro/2048_belleville_icon.png"/>
                         <div class="introTeamTitle">BELLEVILLE</div>
                     </div>
                 </div>
             </div>
 	    </div>
         <div id="gameDiv"></div>
+        <script type="text/javascript" src="/js/toolkit.js"></script>
     	<script type="text/javascript" src="/js/lib/jquery-2.0.0.js"></script>
+        <script type="text/javascript" src="/js/lib/jquery-ui-1.10.3.custom.js"></script>
         <script type="text/javascript" src="/js/lib/kinetic-v4.5.3.js"></script>
         <script type="text/javascript" src="/js/lib/preloadjs-0.3.1.min.js"></script>
-        <script type="text/javascript" src="/js/IntroController.js"></script>
+        <script type="text/javascript" src="/js/ImageLoader.js"></script>
+        <script type="text/javascript" src="/js/controller/NavBarController.js"></script>
+        <script type="text/javascript" src="/js/controller/IntroController.js"></script>
         <script type="text/javascript" src="/js/GameMap.js"></script>
         <script type="text/javascript" src="/js/GameView.js"></script>
+        <script type="text/javascript" src="/js/model/GameModel.js"></script>
+        <script type="text/javascript" src="/js/view/CouncilBudgetGraph.js"></script>
+        <script type="text/javascript" src="/js/view/FireStatsPanel.js"></script>
+        <script type="text/javascript" src="/js/view/WaterStatsPanel.js"></script>
+        <script type="text/javascript" src="/js/view/CouncilStatsPanel.js"></script>
+        <script type="text/javascript" src="/js/view/SpectatorStatsPanel.js"></script>
+        <script type="text/javascript" src="/js/view/BoxBar.js"></script>
+        <script type="text/javascript" src="/js/view/SelectButton.js"></script>
+        <script type="text/javascript" src="/js/view/DecisionSelectBox.js"></script>
+        <script type="text/javascript" src="/js/view/DecisionMultiBox.js"></script>
+        <script type="text/javascript" src="/js/view/DecisionSummaryBox.js"></script>
+        <script type="text/javascript" src="/js/view/CouncilSummaryBox.js"></script>
+        <script type="text/javascript" src="/js/view/FireDecisionPanel.js"></script>
+        <script type="text/javascript" src="/js/view/WaterDecisionPanel.js"></script>
+        <script type="text/javascript" src="/js/view/CouncilDecisionPanel.js"></script>
+        <script type="text/javascript" src="/js/view/SpectatorDecisionPanel.js"></script>
 		<script type="text/javascript" src="/js/GameClient.js"></script>
   </body>
 </html>

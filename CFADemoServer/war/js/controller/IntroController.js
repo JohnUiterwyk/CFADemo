@@ -14,7 +14,8 @@ function IntroController(game)
 IntroController.prototype.initialize = function()
 {
     var that = this;
-    $(".introTeamButton").on("click",function(event){that.onTeamClick(event,this)});
+    $(".introTeamButton").on("touchstart mousedown",function(event){that.onTouchDown(event,this)});
+    $(".introTeamButton").on("touchend mouseup",function(event){that.onTouchUp(event,this)});
 }
 IntroController.prototype.show = function()
 {
@@ -24,8 +25,17 @@ IntroController.prototype.hide = function()
 {
     $("#intro").hide();
 }
-IntroController.prototype.onTeamClick = function(event,target)
+IntroController.prototype.showTeamButtons = function()
 {
+    $("#teamButtons").css("visibility","visible");
+}
+IntroController.prototype.onTouchDown = function(event,target)
+{
+       $("#"+target.id).css("background-color","rgba(255,255,255,.5)");
+}
+IntroController.prototype.onTouchUp = function(event,target)
+{
+    $(".introTeamButton").css("background-color","transparent");
     switch(target.id)
     {
         case "fireTeamButton":
@@ -38,7 +48,7 @@ IntroController.prototype.onTeamClick = function(event,target)
             this.game.loadPlayer("council");
             break;
         case "specButton":
-            this.game.loadPlayer("spec");
+            this.game.loadPlayer("spectator");
             break;
     }
 }
