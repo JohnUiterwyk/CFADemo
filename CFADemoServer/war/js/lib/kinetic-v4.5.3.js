@@ -1155,7 +1155,8 @@ var Kinetic = {};
                 pixelRatio = config.pixelRatio || _pixelRatio,
                 contextType = config.contextType || '2d'; 
 
-            this.pixelRatio = pixelRatio;
+            //this.pixelRatio = pixelRatio;
+            this.pixelRatio = 1; //fix for retina ipad
             this.element = document.createElement('canvas');
             this.element.style.padding = 0;
             this.element.style.margin = 0;

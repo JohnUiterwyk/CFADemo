@@ -61,7 +61,7 @@ WaterDecisionPanel.prototype.initialize = function()
         height: 295,
         decisionId:2,
         title:"Infrastructure".toUpperCase(),
-        description:"Choose the fire mitigation features that council will need to provide. ",
+        description:"Choose the flood features that council will need to provide. ",
         options:[
             "Build overflow channels and catchments",
             "Build levies around residential areas",

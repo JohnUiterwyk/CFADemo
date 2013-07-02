@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="214cec27-d297-4c1b-a91d-efe4f906b9f1" name="Default" comment="" />
+    <list default="true" id="214cec27-d297-4c1b-a91d-efe4f906b9f1" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/view/FireStatsPanel.js" afterPath="$PROJECT_DIR$/js/view/FireStatsPanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/GameClient.js" afterPath="$PROJECT_DIR$/js/GameClient.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/view/WaterDecisionPanel.js" afterPath="$PROJECT_DIR$/js/view/WaterDecisionPanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WEB-INF/appengine-web.xml" afterPath="$PROJECT_DIR$/WEB-INF/appengine-web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stylesheets/game.css" afterPath="$PROJECT_DIR$/stylesheets/game.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/lib/kinetic-v4.5.3.js" afterPath="$PROJECT_DIR$/js/lib/kinetic-v4.5.3.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="war.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/GameClient.js" changelist="214cec27-d297-4c1b-a91d-efe4f906b9f1" time="1370520131950" ignored="false" />
@@ -13,7 +22,7 @@
     <file path="/game.css" changelist="214cec27-d297-4c1b-a91d-efe4f906b9f1" time="1370520465753" ignored="false" />
     <file path="/GameMap.js" changelist="214cec27-d297-4c1b-a91d-efe4f906b9f1" time="1370503438825" ignored="false" />
     <file path="/IntroController.js" changelist="214cec27-d297-4c1b-a91d-efe4f906b9f1" time="1370521552139" ignored="false" />
-    <file path="/Dummy.txt" changelist="214cec27-d297-4c1b-a91d-efe4f906b9f1" time="1370678378321" ignored="false" />
+    <file path="/Dummy.txt" changelist="214cec27-d297-4c1b-a91d-efe4f906b9f1" time="1372742088792" ignored="false" />
     <file path="/GameModel.js" changelist="214cec27-d297-4c1b-a91d-efe4f906b9f1" time="1370558477143" ignored="false" />
     <file path="/NavBarController.js" changelist="214cec27-d297-4c1b-a91d-efe4f906b9f1" time="1370549508975" ignored="false" />
     <file path="/SpectatorStatsPanel.js" changelist="214cec27-d297-4c1b-a91d-efe4f906b9f1" time="1370507880521" ignored="false" />
@@ -33,6 +42,18 @@
     <file path="/SpectatorDecisionPanel.js" changelist="214cec27-d297-4c1b-a91d-efe4f906b9f1" time="1370551399982" ignored="false" />
     <file path="/DecisionSummaryBox.js" changelist="214cec27-d297-4c1b-a91d-efe4f906b9f1" time="1370549818413" ignored="false" />
     <file path="/RatesSummaryBox.js" changelist="214cec27-d297-4c1b-a91d-efe4f906b9f1" time="1370551517227" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/lib/webstorm.jar!/standardSchemas/xml.xsd" changelist="214cec27-d297-4c1b-a91d-efe4f906b9f1" time="1372037575817" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/lib/webstorm.jar!/standardSchemas/xhtml1-frameset.xsd" changelist="214cec27-d297-4c1b-a91d-efe4f906b9f1" time="1372037575817" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/lib/webstorm.jar!/standardSchemas/xhtml1-transitional.xsd" changelist="214cec27-d297-4c1b-a91d-efe4f906b9f1" time="1372037575817" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/lib/webstorm.jar!/standardSchemas/xhtml1-strict.xsd" changelist="214cec27-d297-4c1b-a91d-efe4f906b9f1" time="1372037575817" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/lib/webstorm.jar!/standardSchemas/catalog.xsd" changelist="214cec27-d297-4c1b-a91d-efe4f906b9f1" time="1372037575817" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/lib/webstorm.jar!/standardSchemas/html5/xhtml5.xsd" changelist="214cec27-d297-4c1b-a91d-efe4f906b9f1" time="1372037575817" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/relaxng.rng" changelist="214cec27-d297-4c1b-a91d-efe4f906b9f1" time="1372037575817" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/lib/webstorm.jar!/standardSchemas/XMLSchema.xsd" changelist="214cec27-d297-4c1b-a91d-efe4f906b9f1" time="1372037575817" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/lib/webstorm.jar!/standardSchemas/xinclude.xsd" changelist="214cec27-d297-4c1b-a91d-efe4f906b9f1" time="1372037575817" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/lib/webstorm.jar!/standardSchemas/xslt-1_0.xsd" changelist="214cec27-d297-4c1b-a91d-efe4f906b9f1" time="1372037575817" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/lib/webstorm.jar!/standardSchemas/XMLSchema-instance.xsd" changelist="214cec27-d297-4c1b-a91d-efe4f906b9f1" time="1372037575817" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/lib/webstorm.jar!/standardSchemas/xslt-2_0.xsd" changelist="214cec27-d297-4c1b-a91d-efe4f906b9f1" time="1372037575817" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,11 +91,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameModel.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="GameModel.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/model/GameModel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="194" column="29" selection-start="5364" selection-end="5366" vertical-scroll-proportion="3.4969325">
+            <state line="194" column="29" selection-start="5364" selection-end="5366" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="54" column="110" selection-start="3136" selection-end="3136" vertical-scroll-proportion="0.37017995">
+              <folding>
+                <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h2#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -125,19 +158,19 @@
         <option value="$PROJECT_DIR$/js/view/RatesSummaryBox.js" />
         <option value="$PROJECT_DIR$/js/view/SpectatorDecisionPanel.js" />
         <option value="$PROJECT_DIR$/js/view/CouncilSummaryBox.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/view/BoxBar.js" />
         <option value="$PROJECT_DIR$/js/controller/NavBarController.js" />
         <option value="$PROJECT_DIR$/js/view/CouncilBudgetGraph.js" />
         <option value="$PROJECT_DIR$/js/view/CouncilStatsPanel.js" />
         <option value="$PROJECT_DIR$/js/model/GameModel.js" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="22" />
-    <option name="width" value="1440" />
-    <option name="height" value="798" />
+    <option name="width" value="2560" />
+    <option name="height" value="1337" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -165,7 +198,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -297,45 +329,10 @@
               <option name="myItemId" value="images" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="player" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="war" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="war" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="map" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="war" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="war" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -393,13 +390,16 @@
       <method />
     </configuration>
     <configuration default="true" type="NodeunitConfigurationType" factoryName="Nodeunit">
-      <setting name="nodePath" value="" />
+      <setting name="nodePath" value="/usr/local/bin/node" />
       <envs />
       <setting name="passParentEnvVars" value="true" />
       <setting name="nodeunitModuleDir" value="" />
       <setting name="workingDirectory" value="$PROJECT_DIR$" />
       <setting name="testType" value="JS_FILE" />
       <setting name="jsFile" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="$PROJECT_DIR$">
       <method />
     </configuration>
     <configuration default="true" type="XSLT" factoryName="XSLT">
@@ -416,9 +416,6 @@
       <OutputType value="CONSOLE" save-to-file="false" />
       <FileType name="XML" />
       <JdkChoice value="FROM_MODULE" />
-      <method />
-    </configuration>
-    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="$PROJECT_DIR$">
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugSession" factoryName="Remote" singleton="true">
@@ -445,8 +442,8 @@
       <method />
     </configuration>
     <list size="2">
-      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.Local GAE" />
-      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
+      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
+      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.Local GAE" />
     </list>
     <recent_temporary>
       <list size="1">
@@ -501,13 +498,13 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1440" height="798" extended-state="6" />
-    <editor active="false" />
+    <frame x="0" y="22" width="2560" height="1337" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32907802" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33027524" sideWeight="0.6708861" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32991722" sideWeight="0.6708861" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3261928" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -550,7 +547,7 @@
     <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
     <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
-    <option name="SHORT_DIFF_HORISONTALLY" value="true" />
+    <option name="SHORT_DIFF_HORIZONTALLY" value="true" />
     <option name="SHORT_DIFF_EXTRA_LINES" value="2" />
     <option name="SOFT_WRAPS_IN_SHORT_DIFF" value="true" />
     <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
@@ -618,19 +615,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/view/CouncilSummaryBox.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="101" column="9" selection-start="2445" selection-end="2445" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="19" selection-start="1079" selection-end="1079" vertical-scroll-proportion="-11.875">
-          <folding>
-            <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h2#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
+        <state line="101" column="9" selection-start="2445" selection-end="2445" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/view/DecisionMultiBox.js">
@@ -647,9 +632,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/view/BoxBar.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="110" column="54" selection-start="2916" selection-end="2916" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="110" column="54" selection-start="2916" selection-end="2916" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/controller/IntroController.js">
@@ -694,8 +677,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/model/GameModel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="194" column="29" selection-start="5364" selection-end="5366" vertical-scroll-proportion="3.4969325">
+        <state line="194" column="29" selection-start="5364" selection-end="5366" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="110" selection-start="3136" selection-end="3136" vertical-scroll-proportion="0.37017995">
+          <folding>
+            <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h2#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -48,7 +48,7 @@ GameClient.prototype.loadPlayer = function(player)
 
     this.model.startUpdateTimer();
     this.model.setPlayer(player);
-    //setTimeout(this.onWindowResize,2000);
+    this.onWindowResizeDelayed();
 
 }
 GameClient.prototype.onWindowResizeDelayed = function()
@@ -63,7 +63,7 @@ GameClient.prototype.onWindowResizeDelayed = function()
 GameClient.prototype.onWindowResize = function()
 {
     var stageWidth =  $(window).innerWidth() ;
-    var stageHeight = $(window).innerHeight();
+    var stageHeight =  Math.max($(window).innerHeight(),768*stageWidth/1024) ;
     //var stageWidth = 1024;
     //var stageHeight = 768;
     console.log("window resize to " + stageWidth +" x "+stageHeight);
@@ -87,7 +87,7 @@ GameClient.prototype.onWindowResize = function()
         this.stage.setWidth(stageWidth);
         this.stage.setHeight(stageHeight);
     }
-
+    //change this so it scales when well for wide screens 
     this.stage.setScale(stageWidth/1024);
     this.stage.draw();
 }
