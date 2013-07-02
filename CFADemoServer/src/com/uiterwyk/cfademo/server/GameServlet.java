@@ -36,44 +36,19 @@ public class GameServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException 
 	{
-
-		MemcacheService syncCache = MemcacheServiceFactory.getMemcacheService();
-	    syncCache.setErrorHandler(ErrorHandlers.getConsistentLogAndContinue(Level.INFO));
-	    this.decisions = null;
-	    this.decisions = (ArrayList<Decision>) syncCache.get("decisions");
-	    if(this.decisions == null)
-	    {
-	    	this.decisions = new ArrayList<Decision>();
-		    PopulateData.populate(this.decisions);
-	    }
 	    processInput(req);
 		outputDecisionJSON(resp);
-	    syncCache.put("decisions", this.decisions);
-	
 	}
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException 
 	{
-		MemcacheService syncCache = MemcacheServiceFactory.getMemcacheService();
-	    syncCache.setErrorHandler(ErrorHandlers.getConsistentLogAndContinue(Level.INFO));
-	    this.decisions = null;
-	    this.decisions = (ArrayList<Decision>) syncCache.get("decisions");
-	    if(this.decisions == null)
-	    {
-	    	this.decisions = new ArrayList<Decision>();
-		    PopulateData.populate(this.decisions);
-	    }
 	    processInput(req);
 		outputDecisionJSON(resp);
-	    syncCache.put("decisions", this.decisions);
 	}
 	private void processInput(HttpServletRequest req)
-	{
-
-
-	    
+	{    
 		String decisionParam = req.getParameter("decisionId");
 		String playerParam = req.getParameter("playerId");
 		String selectionParam = req.getParameter("selection");
