@@ -80,7 +80,7 @@ DecisionSelectBox.prototype.initialize = function(settings)
 }
 DecisionSelectBox.prototype.onSelect = function(id)
 {
-    this.game.model.sendDecision(this.settings.player,this.settings.decisionId,[id]);
+    this.game.model.setQuestion(this.settings.player,this.settings.decisionId,id);
     console.log("got "+id);
     //this.kineticGroup.draw();
 }
@@ -113,6 +113,6 @@ DecisionSelectBox.prototype.addText = function(text,size,color,x,y)
 DecisionSelectBox.prototype.update = function(model)
 {
 
-     var sel = model[this.settings.player][this.settings.decisionId][0];
+     var sel = model.data[this.settings.player]['q'+this.settings.decisionId];
     this.boxBar.fillSelect(sel);
 }

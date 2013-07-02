@@ -117,7 +117,7 @@ CouncilSummaryBox.prototype.addText = function(text,x,y)
 
 CouncilSummaryBox.prototype.update = function(model)
 {
-    this.ratesBoxBar.fillSelect(model['council'][0][0]);
-    this.densityBoxBar.fillSelect(model['council'][1][0]);
-    this.feesBoxBar.fillSelect(model['council'][2][0]);
+    this.ratesBoxBar.fillSelect(model.data.council.q0);
+    this.densityBoxBar.fillSelect(model.data.council.q1);
+    this.feesBoxBar.fillSelect(model.data.council.q2);
 }

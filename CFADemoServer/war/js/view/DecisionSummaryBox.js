@@ -96,16 +96,16 @@ DecisionSummaryBox.prototype.initialize = function(settings)
 DecisionSummaryBox.prototype.update = function(model)
 {
 
-    var fireSel = model['fire'][this.settings.decisionId];
-    var waterSel = model['water'][this.settings.decisionId];
+    var fireQuestionData = model.data['fire']['q'+this.settings.decisionId];
+    var waterQuestionData = model.data['water']['q'+this.settings.decisionId];
     if(this.settings.decisionId != 2)
     {
-        this.fireBoxBar.fillSelect(fireSel[0]);
-        this.waterBoxBar.fillSelect(waterSel[0]);
+        this.fireBoxBar.fillSelect(fireQuestionData);
+        this.waterBoxBar.fillSelect(waterQuestionData);
     }else
     {
-        this.fireBoxBar.multiSelect(fireSel);
-        this.waterBoxBar.multiSelect(waterSel);
+        this.fireBoxBar.multiSelect(fireQuestionData);
+        this.waterBoxBar.multiSelect(waterQuestionData);
 
     }
 }

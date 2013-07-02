@@ -37,7 +37,7 @@ GameClient.prototype.loadIntro = function()
     this.intro.show();
     this.navBar.hideButtons();
     this.gameView.hide();
-    this.model.stopUpdateTimer();
+    //this.model.stopUpdateTimer();
 }
 GameClient.prototype.loadPlayer = function(player)
 {
@@ -46,8 +46,9 @@ GameClient.prototype.loadPlayer = function(player)
     this.gameView.showPlayer(player);
     this.gameView.show();
 
-    this.model.startUpdateTimer();
+    //this.model.startUpdateTimer();
     this.model.setPlayer(player);
+    this.gameView.update(this.model);
     this.onWindowResizeDelayed();
 
 }

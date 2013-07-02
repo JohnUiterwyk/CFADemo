@@ -19,16 +19,16 @@ GameMap.prototype.initialize = function()
 }
 GameMap.prototype.update = function (model)
 {
-    console.log("updateing map, with fire set to "+ model.fire[0][0]);
+    console.log("updateing map, with fire set to "+ model.data.fire.q0);
     var updated = false;
-    if(this.fireSelection != model.fire[0][0])
+    if(this.fireSelection != model.data.fire.q0)
     {
-        this.fireSelection = model.fire[0][0];
+        this.fireSelection = model.data.fire.q0;
         updated = true;
     }
-    if(this.waterSelection != model.water[0][0])
+    if(this.waterSelection != model.data.water.q0)
     {
-        this.waterSelection = model.water[0][0];
+        this.waterSelection = model.data.water.q0;
         updated = true;
     }
     if(this.player != model.player)

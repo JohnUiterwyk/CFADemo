@@ -83,7 +83,7 @@ WaterStatsPanel.prototype.getBuildingIcon= function(id,x,y)
 
 WaterStatsPanel.prototype.update = function(model)
 {
-    this.showIcon(model.water[1][0]);
+    this.showIcon(model.data.water.q1);
 }
 
 WaterStatsPanel.prototype.showIcon = function(id)

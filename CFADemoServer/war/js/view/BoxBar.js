@@ -93,23 +93,19 @@ BoxBar.prototype.fillSelect = function(id)
         this.kineticGroup.draw();
     }
 }
-BoxBar.prototype.multiSelect = function(selection)
+BoxBar.prototype.multiSelect = function(questionData)
 {
-    if(!this.selArray.compare(selection))
+    for(var i = 0; i < this.selectBoxes.length;i++)
     {
-        this.selArray = selection;
-        for(var i = 0; i < this.selectBoxes.length;i++)
+        if(questionData['option'+i]==1)
         {
-            if(selection.indexOf(i+1) != -1)
-            {
-                this.selectBoxes[i].setOpacity(1);
-            }else
-            {
-                this.selectBoxes[i].setOpacity(0);
-            }
+            this.selectBoxes[i].setOpacity(1);
+        }else
+        {
+            this.selectBoxes[i].setOpacity(0);
         }
-        this.kineticGroup.draw();
     }
+    this.kineticGroup.draw();
 }
 BoxBar.prototype.setSelected = function(id)
 {

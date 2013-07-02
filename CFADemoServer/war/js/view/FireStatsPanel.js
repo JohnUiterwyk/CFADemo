@@ -80,7 +80,7 @@ FireStatsPanel.prototype.getBuildingIcon= function(id,x,y)
 
 FireStatsPanel.prototype.update = function(model)
 {
-    this.showIcon(model.fire[1][0]);
+    this.showIcon(model.data.fire.q1);
 }
 
 FireStatsPanel.prototype.showIcon = function(id)

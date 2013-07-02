@@ -63,7 +63,7 @@ DecisionMultiBox.prototype.initialize = function(settings)
     this.kineticGroup.add(descText);
 
     //Options
-    for(var i=0;i<=settings.options.length;i++)
+    for(var i=0;i<settings.options.length;i++)
     {
         var line = new Kinetic.Line({
             points: [10,80+i*40,220,80+i*40],
@@ -87,6 +87,7 @@ DecisionMultiBox.prototype.initialize = function(settings)
 
             var selectButton = new SelectButton();
             selectButton.initialize({
+                id:i,
                 x:10,
                 y: 85+i*40,
                 player: settings.player,
@@ -100,24 +101,24 @@ DecisionMultiBox.prototype.initialize = function(settings)
 }
 DecisionMultiBox.prototype.onSelect = function(id)
 {
-    var selection = [];
-    for(var i = 0; i < this.buttons.length;i++)
-    {
-        if(this.buttons[i].selected)
-        {
-            selection.push(i+1);
-        }
-    }
-    this.game.model.sendDecision(this.settings.player,this.settings.decisionId,selection);
-    console.log("got "+selection.toString());
+//    var selection = [];
+//    for(var i = 0; i < this.buttons.length;i++)
+//    {
+//        if(this.buttons[i].selected)
+//        {
+//            selection.push(i+1);
+//        }
+//    }
+    this.game.model.setQuestionOption(this.settings.player,this.settings.decisionId,id,this.buttons[id].selected);
+    console.log("got button "+id+" set to "+this.buttons[id].selected);
     //this.kineticGroup.draw();
 }
 DecisionMultiBox.prototype.update = function(model)
 {
-    var selection = model[this.settings.player][this.settings.decisionId];
+    var questionData = model.data[this.settings.player]["q"+this.settings.decisionId];
     for(var i = 0; i < this.buttons.length;i++)
     {
-        if(selection.indexOf(i+1) != -1)
+        if(questionData['option'+i] == 1)
         {
             this.buttons[i].setSelected(true);
         }else

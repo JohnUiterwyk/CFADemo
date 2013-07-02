@@ -14,9 +14,11 @@ function SelectButton()
     this.colorOne = null;
     this.colorTwo = null;
     this.settings = null;
+    this.id = null;
 }
 SelectButton.prototype.initialize = function(settings)
 {
+    if(settings.id != undefined)this.id = settings.id;
     this.settings = settings;
     this.kineticGroup.setPosition(settings.x,settings.y);
     switch(settings.player)
@@ -66,7 +68,7 @@ SelectButton.prototype.onSelect = function(event)
 {
     var target = event.targetNode;
     this.setSelected(!this.selected);
-    this.settings.selectCallback();
+    this.settings.selectCallback(this.id);
 }
 SelectButton.prototype.setSelected = function(value)
 {
