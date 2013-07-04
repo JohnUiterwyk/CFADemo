@@ -7,6 +7,7 @@
  */
 function GameView(game)
 {
+    this.initialized = false;
     this.game = game;
     this.map = new GameMap(game);
     this.spectatorStatsPanel = new SpectatorStatsPanel(game);
@@ -30,6 +31,7 @@ GameView.prototype.initialize = function()
     this.waterDecisionPanel.initialize();
     this.councilDecisionPanel.initialize();
     this.spectatorDecisionPanel.initialize();
+    this.initialized = true;
 
 
 }
@@ -69,6 +71,8 @@ GameView.prototype.hide = function()
 }
 GameView.prototype.update = function(model)
 {
+    if(this.initialized)
+    {
     this.map.update(model);
     this.spectatorStatsPanel.update(model);
     this.fireStatsPanel.update(model);
@@ -78,4 +82,5 @@ GameView.prototype.update = function(model)
     this.waterDecisionPanel.update(model);
     this.councilDecisionPanel.update(model);
     this.spectatorDecisionPanel.update(model);
+    }
 }

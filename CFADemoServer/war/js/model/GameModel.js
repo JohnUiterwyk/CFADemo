@@ -55,7 +55,7 @@ function GameModel(game)
 //    this.updateEnabled = false;
     this.notifyListener;
     this.xhr = null;
-    this.fireDataRef = new Firebase('https://cfagame.firebaseio.com/');
+    this.fireDataRef = new Firebase('https://cfademo.firebaseio.com/');
     this.fireDataRef.on('value',this.onUpdate.bind(this));
 }
 
