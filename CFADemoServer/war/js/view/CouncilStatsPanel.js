@@ -52,10 +52,11 @@ CouncilStatsPanel.prototype.addText = function()
         fill: '#666666'
     });
 
-    var text = "The hills around Belleville have stunning views, " +
-        "but there are few roads in and out. While these areas are " +
-        "highly desirable for those wanting a natural lifestyle, " +
-        "there are serious concerns about safety in the fire season.";
+    var text = "Although Belleville is a stunning location, "
+    	+"its fire and flood risk factors need addressing. "
+    	+"The local council must try to minimise risk, "
+    	+"whilst still ensuring population, average house prices "
+    	+"and the council budget are all sustainable.";
 
     this.buildingText.setText(text);
     this.panel.add(this.buildingText);

@@ -155,7 +155,7 @@ GameModel.prototype.calcStats = function ()
     var gRateIncome = 0; //dollars = population * rates / gPeoplePerDwelling
     var gDesirability = 2.5; //measure of how attractive area is to live in. Multiplies gDwellings to get population
     var gPopulation = 0; //people (affected by housing cost, etc). gDesirability * dwellings
-    var gExpenses = 1000000;
+    var gExpenses = 0;
 
     var values = [250, 180, 110, 80, 50];
     var index = this.data.fire.q0;
@@ -169,7 +169,7 @@ GameModel.prototype.calcStats = function ()
     {
         if (this.data.fire.q2['option' + i] == 1)
         {
-            gExpenses += 100000;
+            gExpenses += 200000;
         }
     }
 
@@ -183,7 +183,7 @@ GameModel.prototype.calcStats = function ()
 
     for (var i = 0; i < 5; i++) {
         if (this.data.water.q2['option' + i] == 1) {
-            gExpenses += 100000;
+            gExpenses += 200000;
         }
     }
 

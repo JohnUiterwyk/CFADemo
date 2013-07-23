@@ -95,17 +95,20 @@ BoxBar.prototype.fillSelect = function(id)
 }
 BoxBar.prototype.multiSelect = function(questionData)
 {
+	var count = 0;
     for(var i = 0; i < this.selectBoxes.length;i++)
     {
         if(questionData['option'+i]==1)
         {
-            this.selectBoxes[i].setOpacity(1);
+        	count++;
+            //this.selectBoxes[i].setOpacity(1);
         }else
         {
-            this.selectBoxes[i].setOpacity(0);
+            //this.selectBoxes[i].setOpacity(0);
         }
     }
-    this.kineticGroup.draw();
+    this.fillSelect(count-1);
+    //this.kineticGroup.draw();
 }
 BoxBar.prototype.setSelected = function(id)
 {
